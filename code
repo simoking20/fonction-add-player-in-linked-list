@@ -1,0 +1,36 @@
+struct player{
+ char Name[20];
+ char place;
+ int Nb;
+ struct player *next;
+}
+
+struct player *Add_player(char name[],int nb,char place,struct player *team){
+ struct player *p=(struct player*)malloc(sizeof(struct player));
+ p->Nb=nb;//nb in facnction and Nb in struct
+ p->Name=name;
+ if (p==NULL){
+  p->next=NULL;
+  p->place="G";
+  return p;
+ }else{
+  if(team->next==NULL){
+  p->place=place;
+  p=team->next;
+  return team;
+  }else{
+  struct player *temp=team;
+  while(temp->next->next==NULL){
+  tepm=temp->next;
+  }
+  struct player *t1=temp->next;
+  p->place=place;
+  temp->next=p;
+  p->next=t1
+  return team;
+  }
+ }
+
+
+
+}
